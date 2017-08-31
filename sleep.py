@@ -71,11 +71,17 @@ print meanhours, len(meanhours)
 meanhours = np.flipud(np.array(meanhours))
 validhours = np.flipud(np.array(validhours))
 
-f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
-ax1.plot(days, validhours)
-ax2.plot(weeks, meanhours)
-ax1.set_ylabel('hours sleep')
-ax1.set_xlabel('days')
-ax2.set_xlabel('weeks')
+# plot both
+# f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+# ax1.plot(days, validhours)
+# ax2.plot(weeks, meanhours)
+# ax1.set_ylabel('hours sleep')
+# ax1.set_xlabel('days')
+# ax2.set_xlabel('weeks')
+
+# plot mean only
+plt.plot(weeks, meanhours)
+plt.xlabel("Weeks")
+plt.ylabel("Mean Hours Slept")
 plt.tight_layout()
 plt.show()
